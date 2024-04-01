@@ -7,13 +7,13 @@
 size = Vector2(50, 50)
 
 [node name="Snake" type="Node2D"]
+
+[node name="SnakeHead" type="CharacterBody2D" parent="."]
+position = Vector2(282, 154)
 script = ExtResource("1_2gpwf")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(282, 154)
-
-[node name="HeadCollision" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="HeadCollision" type="CollisionShape2D" parent="SnakeHead"]
 shape = SubResource("RectangleShape2D_ek2u2")
 
-[node name="headSprite" type="Sprite2D" parent="CharacterBody2D"]
+[node name="headSprite" type="Sprite2D" parent="SnakeHead"]
 texture = ExtResource("2_6wrkn")
